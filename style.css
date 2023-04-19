@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    font-family: comic;
+    font-family: 'poppins', sans-serif;
 }
 #nav-bar{
     position: sticky;
@@ -13,8 +13,6 @@ body{
 }
 .navbar{
     background-image: linear-gradient(to right,	#696969,#000000);
-    
-
     padding: 20 !important;
 }
 .navbar-nav li{
@@ -35,14 +33,11 @@ body{
 }
 .navbar-toggler{
     outline: none !important;
-
 }
 .navbar-brand img{
     height: 60px;
-    padding-left: 20px;
-   
+    padding-left: 20px;  
 }
-
 .font {
     font-family: cursive;
 }
@@ -74,7 +69,7 @@ body{
     position: relative;
 }
 .c-item{
-    height: 400px;
+    height: 500px;
 }
 .c-img{
     height: 100%;
@@ -83,8 +78,7 @@ body{
 }
 /* #carouselStyle {
     overflow: hidden;
-  }
-  
+ } 
   #carouselStyle::before {
     content: "";
     position: absolute;
@@ -94,7 +88,6 @@ body{
     bottom: 0;
     background: linear-gradient(to bottom, #696969,#000000);
   } */
-
 .spiceshop{
     padding: 15px;
     font-family: Bradley Hand;
@@ -105,8 +98,11 @@ body{
     padding: 10px;
     /* background-color: #696969; */
   }
+  #spiceShop .bi{
+    color: #ff8c00;
+  }
   .imgSpiceShop{
-    height: 150px;
+    height: 200px;
     width: 300px;
   }
 .btn{
@@ -118,7 +114,7 @@ body{
 }
 .pstyle{
     font-family: sans-serif;
-    font-weight: bold;
+    /* font-weight: bold; */
     background-color: #e6e6fa;
 }
  .seemore-arrow{
@@ -342,7 +338,7 @@ body{
     font-size: 20px;
 }  
 
-/* about page */
+/*-------------about page---------------*/
 
 #aboutsec{
     width: 100%;
@@ -375,7 +371,7 @@ body{
     margin-top: 28px;
     text-transform: uppercase; 
     text-align: center;
-    font-family: "Abril Fatface", serif;
+    font-family: 'poppins', sans-serif;
     /* font-weight: bold; */
     text-shadow: 3px 3px 3px #ababab;
 
