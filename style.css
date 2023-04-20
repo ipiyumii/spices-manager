@@ -105,13 +105,13 @@ body{
     height: 200px;
     width: 300px;
   }
-.btn{
+/* .btn{
     margin: 5px;
    width: 80px;
 }
 .btn:hover{
     transform: scale(1.1);
-}
+} */
 .pstyle{
     font-family: sans-serif;
     /* font-weight: bold; */
@@ -368,13 +368,15 @@ body{
     line-height: 1.5;
 }
 .content-section .title{
-    margin-top: 28px;
-    text-transform: uppercase; 
+    font-family:  Georgia, 'Times New Roman', Times, serif;
+    font-size: 3.5rem;
     text-align: center;
-    font-family: 'poppins', sans-serif;
-    /* font-weight: bold; */
-    text-shadow: 3px 3px 3px #ababab;
-
+    margin-top: 28px;
+    font-weight: bold;
+    /* text-shadow: 3px 3px 3px #ababab; */
+    background-color: orange;
+    width: 25%;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%) ;
 }
 @media only screen and (max-width:600px){
     .aboutcontainer{
@@ -402,4 +404,36 @@ body{
       text-align: initial;
       float: none;
     }
+}
+
+/*-----------spice shop--------------*/
+#spiceshp-products .heading{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 50px;
+    font-size: 3.5rem;
+    color: #000000;
+}
+.heading span{
+    background-color: orange;
+    width: 15%;
+    /* color: #fff; */
+    display: inline-block;
+    padding: 5rem, 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%) ;
+}
+#spiceshp-products .btn{
+    color: #000000;
+}
+#spiceshp-products .product-slider{
+    padding: 1rem;
+}
+#spiceshp-products .box{
+    background: #FFFFFF;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+#spiceshp-products .box:hover{
+
 }
