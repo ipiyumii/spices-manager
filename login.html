@@ -1,79 +1,81 @@
 <?php
-
+// Database connection details
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "msm traders";
+$username = "your_username";
+$password = "your_password";
+$dbname = "your_database_name";
 
-
+// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-
+// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Create the Accounts table if it doesn't exist
+$sql = "CREATE TABLE IF NOT EXISTS Accounts (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    telephone VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+)";
+if ($conn->query($sql) === FALSE) {
+    echo "Error creating table: " . $conn->error;
+}
 
+// Function to create a new account
 function createAccount($username, $email, $address, $telephone, $password) {
     global $conn;
     
-
+    // Escape user inputs to prevent SQL injection
     $username = $conn->real_escape_string($username);
     $email = $conn->real_escape_string($email);
     $address = $conn->real_escape_string($address);
     $telephone = $conn->real_escape_string($telephone);
     $password = $conn->real_escape_string($password);
     
-    $checkUsernameQuery = "SELECT * FROM useraccounts WHERE username = '$username'";
-    $checkUsernameResult = $conn->query($checkUsernameQuery);
-    if ($checkUsernameResult->num_rows > 0) {
-        echo "<p style='color: white;'>Username already taken. Please choose a different username.</p>";
-        return; 
-    }
+    // Hash the password for security
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     
-    
-    $sql = "INSERT INTO useraccounts (username, email, address, telephone, password) VALUES ('$username', '$email', '$address', '$telephone', '$hashedPassword')";
+    // Insert new account into the database
+    $sql = "INSERT INTO Accounts (username, email, address, telephone, password) VALUES ('$username', '$email', '$address', '$telephone', '$hashedPassword')";
     if ($conn->query($sql) === TRUE) {
-        echo "<p style='color: white;'>Account created successfully!</p>";
+        echo "Account created successfully!";
     } else {
-        echo "<p style='color: white;'>Error creating account: </p>" . $conn->error;
+        echo "Error creating account: " . $conn->error;
     }
 }
 
-
+// Function to log in to an existing account
 function login($username, $password) {
     global $conn;
     
+    // Escape user inputs to prevent SQL injection
     $username = $conn->real_escape_string($username);
     $password = $conn->real_escape_string($password);
     
-    $sql = "SELECT * FROM useraccounts WHERE username = '$username'";
+    // Retrieve the account from the database
+    $sql = "SELECT * FROM Accounts WHERE username = '$username'";
     $result = $conn->query($sql);
     
     if ($result->num_rows === 1) {
         $row = $result->fetch_assoc();
-    
+        // Verify the password
         if (password_verify($password, $row['password'])) {
-            $username = $row['username'];
-            $email = $row['email'];
-            $address = $row['address'];
-            $telephone = $row['telephone'];
-
-            
-            header("Location: myaccount.php?username=$username&email=$email&address=$address&telephone=$telephone");
-            echo "<p style='color: white;'>Login successful!</p>";
-            
-            exit(); 
+            echo "Login successful!";
+            // Perform any additional actions after successful login
         } else {
-            echo "<p style='color: white;'>Invalid username or password.</p>";
+            echo "Invalid username or password.";
         }
     } else {
-        echo "<p style='color: white;'>Invalid username or password.</p>";
+        echo "Invalid username or password.";
     }
 }
 
-
+// Check if the form is submitted for account creation
 if (isset($_POST['btnregister'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
@@ -84,11 +86,10 @@ if (isset($_POST['btnregister'])) {
     createAccount($username, $email, $address, $telephone, $password);
 }
 
+// Check if the form is submitted for login
 if (isset($_POST['btnsubmit'])) {
     $username = $_POST['uname'];
     $password = $_POST['pword'];
-
-   login($username, $password);
 }
 ?>
 
@@ -162,11 +163,11 @@ if (isset($_POST['btnsubmit'])) {
                     <div class="input-box">
                         <span class="icon"><i class="bi bi-lock-fill"></i></span>
                         <input type="password" id="pword" name="pword" required>
-                        <label>Password</label>
+                        <label>password</label>
                     </div>
                     <div class="remember-forgot">
                         <label><input type="checkbox"> Remember me</label>
-                        <a href="forgetPassword.php">Forgot password?</a>
+                        <a href="#">Forgot password?</a>
                     </div>
                     <button type="submit" class="btnsubmit" id="btnsubmit" name ="btnsubmit">Login</button>
 
@@ -178,7 +179,7 @@ if (isset($_POST['btnsubmit'])) {
 
             <div class="form-box register">
                 <h2>Registration</h2>
-                <form action="login.php" method="post">
+                <form action="login.php" method="psot">
                     <div class="input-box">
                         <span class="icon"><i class="bi bi-person-fill"></i></span>
                         <input type="text" id="username" name="username" required>
@@ -201,9 +202,8 @@ if (isset($_POST['btnsubmit'])) {
                     </div>
                     <div class="input-box">
                         <span class="icon"><i class="bi bi-lock-fill"></i></span>
-                        <input type="password" id="password" name=" password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number 
-                        and one uppercase and lowercase letter, and at least 8 or more characters"  required>
-                        <label>Password</label>
+                        <input type="password" id="password" name=" password" required>
+                        <label>password</label>
                     </div>
 
                     <div class="remember-forgot">

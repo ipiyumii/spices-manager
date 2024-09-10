@@ -16,7 +16,7 @@
     left: 0;
     top: 0;
     height: 100%;
-    background-color:	#008ea1 ;
+    background-color:	#1c2020 ;
     z-index: 100%;
     transition: width 300ms;
 }
@@ -48,7 +48,7 @@
     background: #fff;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    color: #008ea1;
+    color: #1e2324;
     border-radius: 30px 0px 0px 0px;
 }
 
@@ -113,7 +113,7 @@ header{
     font-size: 1.5rem;
     padding-right: 1rem;
     margin-left: 15px;
-    color: #008ea1;
+    color: #2e3637;
 }
 .iconsContainer{
     display: flex;
@@ -128,7 +128,7 @@ header{
 .iconsContainer .icons .bi{
     cursor: pointer;
     font-size: 30px;
-    color: #008ea1;
+    color: #364143;
     padding: 10%;   
     box-sizing: inherit;
     background-size: 150%;
@@ -188,7 +188,7 @@ header{
 		color: #fff;
 		align-items: center;
 		justify-content: center !important;
-		background-color: #008ea1;
+		background-color: #434b4c;
 	}
 	header p span{
 		text-align: center;

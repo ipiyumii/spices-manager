@@ -1,6 +1,6 @@
 /*-----------spice shop--------------*/
 #spiceshp-products .heading{
-    font-family:cursive;
+    font-family:'Times New Roman', Times, serif;
     padding: 50px;
     font-size: 3.5rem;
     color: 	#191970;
@@ -15,7 +15,7 @@
    
 }
 #spiceshp-products h3{
-    font-family: cursive;
+    font-family: 'Times New Roman', Times, serif;
 }
 #spiceshp-products .btn:hover{
     background-color:	orange	;

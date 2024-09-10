@@ -63,13 +63,7 @@
         <h1> About Us</h1>
      <br>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Voluptatem dolore autem incidunt ut reiciendis dolorum magni inventore odio. 
-          Esse sit incidunt aperiam reiciendis nemo! Non doloribus necessitatibus quia voluptate perspiciatis!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab error officiis fugiat recusandae? Quod explicabo 
-        venia cum odit laboriosam illum dolore dolores, praesentium dolor adipisci beatae, mollitia iste necessitatibus fugiat!
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illo, dicta sint cumque neque maxime, libero incidunt quae, 
-      distinctio accusantium corrupti pariatur ut reprehenderit ad id? Impedit officiis hic tenetur!</p>
+        <p>The spice trade is one of the oldest industries, which changed not only the way people cooked, but also how they viewed the world as a community. Once again the spice trade has moved global thoughts and ideas, but this time it’s being delivered by a website — M S M Traders. Spices have been used for thousands of years to add flavor and aroma to food. They are often associated with specific cultures and cuisines, and many have medicinal properties as well. In 1999 M S M Traders was opened, We set out with the intention of bringing once unattainable ingredients to your kitchen in just a few clicks. With over 500 products, you’ll be sure to find everything you need for whatever project you’re cooking up in the kitchen. Meals bring friends and families together and we’re proud to be the spicy glue that helps.</p>
       </div>
 
       <div class="image-section">

@@ -88,7 +88,7 @@
     <div class="row">
       <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2">
         <img src="images/spiceShop/cinnamon.jpeg" class="imgSpiceShop mx-auto d-block img-fluid" alt="cinnamon">
-        <p class="text-center pstyle"><b>Cinnamon</b>  <br> (250g) Rs.500/=<br>  
+        <p class="text-center pstyle"><b>Cinnamon</b>  <br> 1KG/LKR 5000.00<br>  
           <i class="bi bi-star-fill"></i>
           <i class="bi bi-star-fill"></i>
           <i class="bi bi-star-fill"></i>
@@ -98,7 +98,7 @@
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2">
         <img src="images/spiceShop/black peper.webp" class="imgSpiceShop mx-auto d-block img-fluid" alt="black peper">
-        <p class="text-center pstyle"><b>Black Peper </b> <br> (250g) Rs.500/=<br>  
+        <p class="text-center pstyle"><b>Black Peper </b> <br> 1KG/LKR 1600.00<br>  
           <i class="bi bi-star-fill"></i>
           <i class="bi bi-star-fill"></i>
           <i class="bi bi-star-fill"></i>
@@ -108,7 +108,7 @@
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2">
         <img src="images/spiceShop/cloves.webp" class="imgSpiceShop mx-auto d-block img-fluid" alt="cloves">
-        <p class="text-center pstyle"> <b>Cloves </b>  <br>(250g) - Rs.500/=  <br>
+        <p class="text-center pstyle"> <b>Cloves </b>  <br>1KG/LKR 2500.00 <br>
        
           <i class="bi bi-star-fill"></i>
           <i class="bi bi-star-fill"></i>
@@ -119,7 +119,7 @@
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2">
           <img src="images/spiceShop/nutmeg.jpeg" class="imgSpiceShop mx-auto d-block img-fluid" alt="mutmeg">
-          <p class="text-center pstyle"> <b>Mutmeg </b>  <br>(250g) - Rs.500/=<br>  
+          <p class="text-center pstyle"> <b>Nutmeg </b>  <br>1KG/LKR 1400.00<br>  
            
             <i class="bi bi-star-fill"></i>
           <i class="bi bi-star-fill"></i>
@@ -130,7 +130,7 @@
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2">
           <img src="images/spiceShop/termeric.webp" class="imgSpiceShop mx-auto d-block img-fluid" alt="termeric">
-          <p class="text-center pstyle"><b>Termeric </b> <br>(250g) - Rs.500/= <br>  
+          <p class="text-center pstyle"><b>Turmeric </b> <br>1KG/LKR 600.00<br>  
          
             <i class="bi bi-star-fill"></i>
           <i class="bi bi-star-fill"></i>
@@ -141,7 +141,7 @@
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2">
           <img src="images/spiceShop/chillie.jpeg" class="imgSpiceShop mx-auto d-block img-fluid" alt="chillie">
-          <p class="text-center pstyle"><b>Dried Chillie</b>  <br>(250g) - Rs.500/=<br>  
+          <p class="text-center pstyle"><b>Dried Chillie</b>  <br>1KG/LKR 1600.00<br>  
            
             <i class="bi bi-star-fill"></i>
           <i class="bi bi-star-fill"></i>

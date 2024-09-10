@@ -1,6 +1,6 @@
 /*----------------- contact us------------------ */
 .about-contact-container{
-    width: 50%;
+    width: 60%;
     padding: 45px;
     border-radius: 0;
     position: absolute;
@@ -15,23 +15,24 @@
     padding: 20px;
 }
 .col-md-5{
-    background-color:#008ea1;
-    padding: 20px;
-    color: white;
+    background-color:#485051;
+    padding: 5px;
+    color: #d3d3d3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .form-control{
     height: 52px;
-    background: #FFFFFF;
+    background: #d3d3d3;
     color: black;
-     font-size: 14px;
-     border-radius: 2px;
-     box-sizing: none !important;
-     border: 1px solid rgba(0, 0, 0, 0.1)
+    font-size: 14px;
+    border-radius: 2px;
+    box-sizing: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.1)
 }
 .d-flex p{
     font-size: 18px;
-    padding-left: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 2px;
+    font-family: 'Times New Roman', Times, serif;
 }
 .bi{
     font-size: 20px;

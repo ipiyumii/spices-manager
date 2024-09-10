@@ -1,4 +1,58 @@
 <!DOCTYPE html>
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "msm traders";
+
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+   
+    
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $telephone = $_POST['telephone'];
+    $inquiry = $_POST['inquiry'];
+
+   
+    
+    if (empty($name) || empty($email) || empty($telephone) || empty($inquiry)) {
+     
+      echo "Please fill in all the fields.";
+  } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      
+      echo "Please enter a valid email address.";
+  } elseif (!preg_match("/^\d{10}$/", $telephone)) {
+     
+      echo "Please enter a valid telephone number.";
+  } else {
+      
+      $currentDate = date('Y-m-d');
+
+
+      $sql = "INSERT INTO inquiries (name, email, telephone, inquiry,date) 
+              VALUES ('$name', '$email', '$telephone', '$inquiry', '$currentDate')";
+      $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+        
+        echo "Inquiry submitted successfully.";
+    } else {
+      
+        echo "Error: " . mysqli_error($conn);
+    }
+}
+}
+?>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -57,47 +111,53 @@
     </nav>
   </section>
 
- <section>
+  <section>
     <div class="container about-contact-container">
     <div class="row formrow">
         <div class="col-md-7">
-            <h4>get in touch</h4>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Name</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="enter your name">
+            <h4>Get In Touch..</h4>
+            <form action="contact.php" method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
               </div>
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="enter your e-mail">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
               </div>
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Telephone</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="enter your numbr">
+                <label for="telephone" class="form-label">Telephone</label>
+                <input type="text" class="form-control" id="telephone" name="telephone" placeholder="Enter your telephone number" required>
               </div>
               <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Supplier/Customer inquiry</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type your message here..."></textarea>
-                <button type="submit" class="btn btn-secondary btncontact">Submit</button>
+                <label for="inquiry" class="form-label">Supplier/Customer inquiry</label>
+                <textarea class="form-control" id="inquiry" name="inquiry" rows="3" placeholder="Type your message here..." required></textarea>
               </div>
+              <button type="submit" class="btn btn-secondary btncontact">Submit</button>
+            </form>
         </div>
         <div class="col-md-5">
             <h4>Contact us</h4><hr>
             <div class="mt-5">
                 <div class="d-flex">
                     <i class="bi bi-geo-alt-fill"></i>
-                    <p>Adress: 20/A,xxxxxx road ,xxxxxxxx</p>
+                    <p>Address:</p>
+                    <p>No 10, Kandy Rd, Mawathagama</p>
                 </div> <hr>
                 <div class="d-flex">
                     <i class="bi bi-telephone-fill"></i>
-                    <p>Teleohne:- 075-xxxxxxxx</p>
+                    <p>Tele:</p>
+                    <p> 0773598598</p>
                 </div> <hr>
                 <div class="d-flex">
                     <i class="bi bi-whatsapp"></i>
-                    <p>Whatsapp:- 075-xxxxxxxx</p>
+                    <p>Whatsapp:</p>
+                    <p>0773598598</p>
                 </div> <hr>
                 <div class="d-flex">
                     <i class="bi bi-envelope-fill"></i>
-                    <p>E-mail: contact@gaiml.com</p>
+                    <p>Email:</P>
+                    <p>hidhayathulla@gmail.com</p>
                 </div> <hr>
             </div>
         </div>
